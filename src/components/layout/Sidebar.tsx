@@ -23,60 +23,67 @@ export function Sidebar({
   const pathname = usePathname();
 
   return (
-    <aside className="fixed left-0 top-0 z-50 flex h-full w-52 flex-col bg-surface-container-low border-r border-outline-variant">
+    <aside className="fixed left-0 top-0 z-50 flex h-full w-52 flex-col bg-white border-r border-slate-200">
       {/* Logo */}
-      <div className="flex items-center gap-2.5 px-4 h-12 border-b border-outline-variant">
-        <span className="material-symbols-outlined text-[18px] text-secondary">school</span>
-        <span className="text-[13px] font-semibold text-on-surface">LGS Portal</span>
+      <div className="flex items-center gap-2.5 px-4 py-3.5">
+        <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-secondary">
+          <span className="material-symbols-outlined text-[15px] text-white">school</span>
+        </div>
+        <span className="text-[14px] font-bold text-slate-900 tracking-tight">LGS Portal</span>
       </div>
 
-      {/* Şube */}
-      <div className="px-3 py-2 border-b border-outline-variant">
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-on-surface-variant mb-1">
-          Aktif Şube
-        </p>
-        <div className="flex items-center justify-between px-2 py-1.5 bg-surface-container cursor-pointer hover:bg-surface-container-high transition-colors">
-          <div className="flex items-center gap-2 min-w-0">
-            <span className="material-symbols-outlined text-[14px] text-secondary shrink-0">groups</span>
-            <span className="text-[12px] font-medium text-on-surface truncate">{className}</span>
-            <span className="text-[11px] text-on-surface-variant shrink-0">{studentCount} öğr.</span>
+      {/* Şube seçici */}
+      <div className="px-3 pb-2">
+        <div className="flex items-center justify-between rounded-md px-2 py-1.5 bg-slate-50 hover:bg-slate-100 cursor-pointer transition-colors border border-slate-200">
+          <div className="flex items-center gap-1.5 min-w-0">
+            <span className="material-symbols-outlined text-[13px] text-secondary shrink-0">groups</span>
+            <span className="text-[12px] font-semibold text-slate-700 truncate">{className}</span>
+            <span className="text-[11px] text-slate-400 shrink-0">{studentCount} öğr.</span>
           </div>
-          <span className="material-symbols-outlined text-[14px] text-on-surface-variant shrink-0">unfold_more</span>
+          <span className="material-symbols-outlined text-[13px] text-slate-400 shrink-0">unfold_more</span>
         </div>
       </div>
 
+      <div className="mx-3 h-px bg-slate-100 mb-1" />
+
       {/* Nav */}
-      <nav className="flex-1 overflow-y-auto py-1">
+      <nav className="flex-1 overflow-y-auto px-2 py-1">
+        <p className="px-2 py-1.5 text-[10px] font-semibold uppercase tracking-widest text-slate-400">
+          Ana Menü
+        </p>
         {NAV.map((item) => {
           const active = pathname === item.href || pathname.startsWith(item.href + "/");
           return (
             <Link
               key={item.href}
               href={item.href}
-              className={`flex items-center gap-2.5 px-4 py-2 text-[12px] font-medium transition-colors ${
+              className={`flex items-center gap-2 px-2 py-1.5 rounded-md text-[13px] font-medium transition-colors mb-0.5 ${
                 active
-                  ? "bg-secondary-container text-on-secondary-container border-l-2 border-secondary"
-                  : "text-on-surface-variant hover:bg-surface-container hover:text-on-surface border-l-2 border-transparent"
+                  ? "bg-secondary/8 text-secondary"
+                  : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
               }`}
             >
-              <span className="material-symbols-outlined text-[16px] shrink-0">{item.icon}</span>
+              <span className={`material-symbols-outlined text-[16px] shrink-0 ${active ? "text-secondary" : "text-slate-400"}`}>
+                {item.icon}
+              </span>
               <span className="truncate">{item.label}</span>
             </Link>
           );
         })}
       </nav>
 
-      {/* Ayarlar */}
-      <div className="border-t border-outline-variant">
+      {/* Alt — Ayarlar */}
+      <div className="mx-3 h-px bg-slate-100 mb-1" />
+      <div className="px-2 pb-3">
         <Link
           href="/ayarlar"
-          className={`flex items-center gap-2.5 px-4 py-2.5 text-[12px] font-medium transition-colors ${
+          className={`flex items-center gap-2 px-2 py-1.5 rounded-md text-[13px] font-medium transition-colors ${
             pathname === "/ayarlar"
-              ? "bg-secondary-container text-on-secondary-container"
-              : "text-on-surface-variant hover:bg-surface-container hover:text-on-surface"
+              ? "bg-secondary/8 text-secondary"
+              : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
           }`}
         >
-          <span className="material-symbols-outlined text-[16px]">settings</span>
+          <span className="material-symbols-outlined text-[16px] text-slate-400">settings</span>
           <span>Ayarlar</span>
         </Link>
       </div>

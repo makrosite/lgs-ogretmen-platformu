@@ -37,7 +37,7 @@ export default async function TeacherLayout({
           teacherTitle={session.user.title ?? ""}
           notifCount={pending}
         />
-        <main className="mx-auto w-full max-w-[1280px] flex-1 bg-background px-4 pt-12 pb-6">
+        <main className="mx-auto w-full max-w-[1280px] flex-1 bg-background px-6 pt-[72px] pb-8">
           {children}
         </main>
       </div>

@@ -2,6 +2,9 @@
 
 import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
 export function CreateExamForm({ classId }: { classId: string }) {
   const router = useRouter();
@@ -27,35 +30,18 @@ export function CreateExamForm({ classId }: { classId: string }) {
   }
 
   return (
-    <form
-      onSubmit={onSubmit}
-      className="grid grid-cols-1 gap-space-md rounded-xl bg-surface-container-lowest p-space-lg shadow-sm md:grid-cols-4"
-    >
-      <input
-        name="name"
-        required
-        placeholder="Deneme adı"
-        className="h-10 rounded-xl border border-outline-variant bg-surface-container-low px-3 font-body-md outline-none focus:border-secondary"
-      />
-      <input
-        name="publisher"
-        required
-        placeholder="Yayınevi"
-        className="h-10 rounded-xl border border-outline-variant bg-surface-container-low px-3 font-body-md outline-none focus:border-secondary"
-      />
-      <input
-        name="date"
-        type="date"
-        required
-        className="h-10 rounded-xl border border-outline-variant bg-surface-container-low px-3 font-body-md outline-none focus:border-secondary"
-      />
-      <button
-        type="submit"
-        disabled={loading}
-        className="h-10 rounded-xl bg-secondary font-label-md text-on-secondary disabled:opacity-60"
-      >
-        {loading ? "Oluşturuluyor..." : "Deneme + Linkler Oluştur"}
-      </button>
-    </form>
+    <Card>
+      <CardContent className="pt-5">
+        <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-500">Yeni Deneme Ekle</p>
+        <form onSubmit={onSubmit} className="grid grid-cols-1 gap-3 md:grid-cols-4">
+          <Input name="name" required placeholder="Deneme adı" />
+          <Input name="publisher" required placeholder="Yayınevi" />
+          <Input name="date" type="date" required />
+          <Button type="submit" disabled={loading} className="w-full">
+            {loading ? "Oluşturuluyor..." : "Deneme + Linkler Oluştur"}
+          </Button>
+        </form>
+      </CardContent>
+    </Card>
   );
 }

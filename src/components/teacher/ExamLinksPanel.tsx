@@ -1,6 +1,9 @@
 "use client";
 
 import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 type LinkRow = {
   id: string;
@@ -23,8 +26,7 @@ export function ExamLinksPanel({
   const base = typeof window !== "undefined" ? window.location.origin : "";
 
   async function copy(token: string) {
-    const url = `${base}/form/${token}`;
-    await navigator.clipboard.writeText(url);
+    await navigator.clipboard.writeText(`${base}/form/${token}`);
     setCopied(token);
     setTimeout(() => setCopied(null), 1500);
   }
@@ -37,57 +39,44 @@ export function ExamLinksPanel({
   const missing = students.filter((s) => !links.some((l) => l.studentNumber === s.number));
 
   return (
-    <div className="space-y-space-sm">
+    <div className="space-y-3">
       {missing.length > 0 && (
-        <button
-          type="button"
-          onClick={regenerateMissing}
-          className="rounded-xl bg-secondary-fixed px-space-md py-space-sm font-label-md text-on-secondary-fixed-variant"
-        >
+        <Button variant="outline" size="sm" onClick={regenerateMissing}>
+          <span className="material-symbols-outlined text-[14px]">add_link</span>
           Eksik {missing.length} link oluştur
-        </button>
+        </Button>
       )}
-      <div className="overflow-x-auto">
-        <table className="w-full text-left">
-          <thead>
-            <tr className="border-b border-outline-variant font-label-md text-on-surface-variant">
-              <th className="py-2 pr-2">No</th>
-              <th className="py-2 pr-2">Öğrenci</th>
-              <th className="py-2 pr-2">Durum</th>
-              <th className="py-2">Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            {links.map((l) => (
-              <tr key={l.id} className="border-b border-outline-variant/40 font-body-sm">
-                <td className="py-2 pr-2">{l.studentNumber}</td>
-                <td className="py-2 pr-2 font-label-md text-on-surface">{l.studentName}</td>
-                <td className="py-2 pr-2">
-                  {l.usedAt ? (
-                    <span className="rounded-full bg-tertiary-fixed/30 px-2 py-0.5 font-label-sm text-on-tertiary-container">
-                      Gönderildi
-                    </span>
-                  ) : (
-                    <span className="rounded-full bg-secondary-fixed px-2 py-0.5 font-label-sm text-secondary">
-                      Bekliyor
-                    </span>
-                  )}
-                </td>
-                <td className="py-2">
-                  <button
-                    type="button"
-                    onClick={() => copy(l.token)}
-                    className="inline-flex items-center gap-1 rounded-lg bg-surface-container-high px-2 py-1 font-label-sm text-on-surface"
-                  >
-                    <span className="material-symbols-outlined text-[14px]">content_copy</span>
-                    {copied === l.token ? "Kopyalandı" : "Kopyala"}
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+      <Table>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="w-12">No</TableHead>
+            <TableHead>Öğrenci</TableHead>
+            <TableHead>Durum</TableHead>
+            <TableHead>Link</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          {links.map((l) => (
+            <TableRow key={l.id}>
+              <TableCell className="text-slate-400">{l.studentNumber}</TableCell>
+              <TableCell className="font-medium text-slate-800">{l.studentName}</TableCell>
+              <TableCell>
+                {l.usedAt ? (
+                  <Badge variant="success">Gönderildi</Badge>
+                ) : (
+                  <Badge variant="default">Bekliyor</Badge>
+                )}
+              </TableCell>
+              <TableCell>
+                <Button variant="ghost" size="sm" onClick={() => copy(l.token)}>
+                  <span className="material-symbols-outlined text-[14px]">content_copy</span>
+                  {copied === l.token ? "Kopyalandı!" : "Kopyala"}
+                </Button>
+              </TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   );
 }
