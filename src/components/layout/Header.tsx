@@ -12,46 +12,44 @@ export function Header({
   notifCount?: number;
 }) {
   return (
-    <header className="fixed top-0 left-52 right-0 z-40 flex h-12 items-center justify-between border-b border-outline-variant/40 bg-surface-bright/95 px-4 backdrop-blur-xl">
+    <header className="fixed top-0 left-52 right-0 z-40 flex h-12 items-center justify-between border-b border-outline-variant bg-surface px-4">
       {/* Search */}
-      <div className="flex w-64 items-center">
-        <div className="relative flex w-full items-center rounded-lg bg-surface-container-lowest px-2.5 py-1.5">
-          <span className="material-symbols-outlined mr-2 text-[16px] text-outline">search</span>
-          <input
-            className="w-full border-none bg-transparent text-[13px] text-on-surface outline-none placeholder:text-outline"
-            placeholder="Öğrenci veya deneme ara..."
-            type="text"
-          />
-        </div>
+      <div className="flex w-64 items-center border border-outline-variant bg-surface-container-lowest">
+        <span className="material-symbols-outlined ml-2.5 text-[15px] text-outline">search</span>
+        <input
+          className="w-full border-none bg-transparent px-2 py-1.5 text-[12px] text-on-surface outline-none placeholder:text-outline"
+          placeholder="Öğrenci veya deneme ara..."
+          type="text"
+        />
       </div>
 
-      {/* Right actions */}
+      {/* Sağ */}
       <div className="flex items-center gap-3">
         <Link
           href="/denemeler"
-          className="flex items-center gap-1.5 rounded-lg bg-secondary px-3 py-1.5 text-[12px] font-semibold text-on-secondary transition-colors hover:opacity-90"
+          className="flex items-center gap-1.5 bg-secondary px-3 py-1.5 text-[12px] font-medium text-on-secondary hover:opacity-90 transition-opacity"
         >
           <span className="material-symbols-outlined text-[14px]">add</span>
-          <span>Yeni Deneme</span>
+          Yeni Deneme
         </Link>
 
-        <div className="relative cursor-pointer rounded-full p-1.5 transition-colors hover:bg-surface-container-high">
+        <div className="relative cursor-pointer p-1.5 hover:bg-surface-container transition-colors">
           <span className="material-symbols-outlined text-[20px] text-on-surface-variant">notifications</span>
           {notifCount > 0 && (
-            <span className="absolute top-0.5 right-0.5 flex h-3.5 w-3.5 items-center justify-center rounded-full bg-error text-[9px] font-bold text-on-error">
+            <span className="absolute top-1 right-1 flex h-3.5 w-3.5 items-center justify-center bg-error text-[9px] font-bold text-on-error">
               {notifCount}
             </span>
           )}
         </div>
 
-        <div className="h-5 w-px bg-outline-variant" />
+        <div className="h-4 w-px bg-outline-variant" />
 
-        <div className="flex cursor-pointer items-center gap-2">
+        <div className="flex items-center gap-2 cursor-pointer">
           <div className="hidden text-right sm:block">
             <p className="text-[12px] font-semibold leading-tight text-on-surface">{teacherName}</p>
             <p className="text-[11px] leading-tight text-on-surface-variant">{teacherTitle}</p>
           </div>
-          <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-secondary-fixed text-[12px] font-bold text-secondary">
+          <div className="flex h-7 w-7 shrink-0 items-center justify-center bg-secondary text-[12px] font-bold text-on-secondary">
             {teacherName.slice(0, 1)}
           </div>
         </div>

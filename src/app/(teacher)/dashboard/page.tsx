@@ -59,49 +59,38 @@ export default async function DashboardPage() {
   const maxTrend = Math.max(90, ...trend.map((t) => t.net));
 
   return (
-    <div className="flex w-full flex-col gap-space-lg">
-      <div className="relative overflow-hidden rounded-2xl bg-primary-container p-8 shadow-sm">
-        <div className="absolute top-0 right-0 h-72 w-72 translate-x-16 -translate-y-16 rounded-full bg-secondary/10 pointer-events-none" />
-        <div className="absolute bottom-0 left-48 h-48 w-48 rounded-full bg-on-tertiary-container/5 pointer-events-none" />
-        <div className="relative z-10 flex flex-col gap-2">
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-secondary/20 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-secondary-fixed-dim">
-              <span className="h-1.5 w-1.5 rounded-full bg-on-tertiary-container animate-pulse" />
-              2026 LGS Hazırlık
-            </span>
-            <span className="text-[12px] text-on-primary-container/50">Aktif Dönem: 2. Dönem</span>
-          </div>
-          <h1 className="text-[26px] font-bold leading-tight tracking-tight text-on-primary-container">
-            Hoş geldiniz, {session?.user.name?.split(" ")[0] ?? "Öğretmen"} Hocam 👋
+    <div className="flex w-full flex-col gap-6">
+      {/* Sayfa başlığı — sade */}
+      <div className="flex items-center justify-between border-b border-outline-variant pb-4">
+        <div>
+          <h1 className="text-[18px] font-semibold text-on-surface">
+            {klass?.name ?? "Sınıf"} — Genel Bakış
           </h1>
-          <p className="flex items-center gap-2 text-[13px] text-on-primary-container/60">
-            <span>{klass?.name ?? "Sınıf"} · LGS Hazırlık Takibi</span>
-            <span className="rounded-md bg-secondary/20 px-2 py-0.5 text-[12px] font-semibold text-secondary-fixed-dim">
-              {klass?.students.length ?? 0} Öğrenci
-            </span>
+          <p className="text-[12px] text-on-surface-variant">
+            {session?.user.name} · 2026 LGS Hazırlık · {klass?.students.length ?? 0} öğrenci
           </p>
         </div>
-        <div className="relative z-10 mt-6 flex flex-wrap gap-3">
-          <Link
-            href="/denemeler"
-            className="flex items-center gap-2 rounded-xl bg-secondary px-5 py-2.5 text-[13px] font-semibold text-on-secondary shadow-sm hover:opacity-90 transition-opacity"
-          >
-            <span className="material-symbols-outlined text-[17px]">add_link</span>
-            Deneme Linki Oluştur
-          </Link>
+        <div className="flex items-center gap-2">
           {latestWithResults && (
             <Link
               href={`/yanlis-sorular/${latestWithResults.id}`}
-              className="flex items-center gap-2 rounded-xl bg-on-primary-container/10 border border-on-primary-container/20 px-5 py-2.5 text-[13px] font-semibold text-on-primary-container hover:bg-on-primary-container/15 transition-colors"
+              className="flex items-center gap-1.5 border border-outline-variant px-3 py-1.5 text-[12px] font-medium text-on-surface hover:bg-surface-container transition-colors"
             >
-              <span className="material-symbols-outlined text-[17px]">quiz</span>
+              <span className="material-symbols-outlined text-[15px]">quiz</span>
               Yanlış Soru Galerisi
             </Link>
           )}
+          <Link
+            href="/denemeler"
+            className="flex items-center gap-1.5 bg-secondary px-3 py-1.5 text-[12px] font-medium text-on-secondary hover:opacity-90 transition-opacity"
+          >
+            <span className="material-symbols-outlined text-[15px]">add_link</span>
+            Yeni Deneme Linki
+          </Link>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-space-md sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {[
           {
             label: "Son Deneme Sınıf Neti",
@@ -138,13 +127,11 @@ export default async function DashboardPage() {
         ].map((kpi) => (
           <div
             key={kpi.label}
-            className="flex flex-col gap-3 rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-5 shadow-sm"
+            className="flex flex-col gap-3 border border-outline-variant bg-surface-container-lowest p-4"
           >
             <div className="flex items-center justify-between">
-              <span className="text-[12px] font-medium text-on-surface-variant">{kpi.label}</span>
-              <span className={`flex h-8 w-8 items-center justify-center rounded-lg ${kpi.bg}`}>
-                <span className={`material-symbols-outlined text-[18px] ${kpi.accent}`}>{kpi.icon}</span>
-              </span>
+              <span className="text-[11px] font-medium uppercase tracking-wide text-on-surface-variant">{kpi.label}</span>
+              <span className={`material-symbols-outlined text-[18px] ${kpi.accent}`}>{kpi.icon}</span>
             </div>
             <div className="flex items-baseline gap-1.5">
               <span className={`font-metric-stat tracking-tight ${kpi.accent}`}>{kpi.value}</span>
@@ -154,9 +141,9 @@ export default async function DashboardPage() {
         ))}
       </div>
 
-      <div className="grid grid-cols-1 gap-space-lg lg:grid-cols-3">
-        <div className="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-sm lg:col-span-2">
-          <h2 className="mb-5 text-[15px] font-semibold text-on-surface">
+      <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <div className="border border-outline-variant bg-surface-container-lowest p-5 lg:col-span-2">
+          <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-on-surface-variant">
             Sınıf Net Gelişim Trendi
           </h2>
           {trend.length === 0 ? (
@@ -209,17 +196,16 @@ export default async function DashboardPage() {
           )}
         </div>
 
-        <div className="rounded-2xl border border-outline-variant/40 bg-surface-container-lowest p-6 shadow-sm">
-          <h2 className="mb-5 text-[15px] font-semibold text-on-surface">Aktif Deneme</h2>
+        <div className="border border-outline-variant bg-surface-container-lowest p-5">
+          <h2 className="mb-4 text-[13px] font-semibold uppercase tracking-wide text-on-surface-variant">Aktif Deneme</h2>
           {activeExam ? (
             <div className="flex flex-col gap-4">
               <div>
-                <p className="text-[14px] font-semibold text-on-surface leading-snug">{activeExam.name}</p>
-                <p className="mt-1 text-[12px] text-on-surface-variant">
+                <p className="text-[13px] font-semibold text-on-surface">{activeExam.name}</p>
+                <p className="mt-0.5 text-[12px] text-on-surface-variant">
                   {activeExam.publisher} · {new Date(activeExam.date).toLocaleDateString("tr-TR")}
                 </p>
               </div>
-              {/* İlerleme */}
               <div>
                 <div className="mb-1.5 flex items-center justify-between text-[12px]">
                   <span className="text-on-surface-variant">Form Tamamlama</span>
@@ -227,9 +213,9 @@ export default async function DashboardPage() {
                     {activeExam.links.filter((l) => l.usedAt).length}/{activeExam.links.length}
                   </span>
                 </div>
-                <div className="h-2 w-full overflow-hidden rounded-full bg-surface-container-high">
+                <div className="h-1.5 w-full bg-surface-container-high">
                   <div
-                    className="h-full rounded-full bg-secondary transition-all"
+                    className="h-full bg-secondary transition-all"
                     style={{
                       width: activeExam.links.length
                         ? `${(activeExam.links.filter((l) => l.usedAt).length / activeExam.links.length) * 100}%`
@@ -240,17 +226,16 @@ export default async function DashboardPage() {
               </div>
               <Link
                 href="/denemeler"
-                className="inline-flex items-center justify-center gap-1.5 rounded-xl bg-secondary px-4 py-2.5 text-[13px] font-semibold text-on-secondary hover:opacity-90 transition-opacity"
+                className="inline-flex items-center gap-1.5 border border-outline-variant px-3 py-1.5 text-[12px] font-medium text-on-surface hover:bg-surface-container transition-colors"
               >
                 Linkleri Yönet
-                <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
+                <span className="material-symbols-outlined text-[15px]">arrow_forward</span>
               </Link>
             </div>
           ) : (
-            <div className="flex flex-col items-center gap-3 py-6 text-center">
-              <span className="material-symbols-outlined text-[40px] text-outline">assignment</span>
+            <div className="py-6 text-center">
               <p className="text-[13px] text-on-surface-variant">Henüz deneme oluşturulmadı</p>
-              <Link href="/denemeler" className="text-[13px] font-semibold text-secondary hover:underline">
+              <Link href="/denemeler" className="mt-2 inline-block text-[12px] font-semibold text-secondary hover:underline">
                 İlk denemeyi oluştur →
               </Link>
             </div>
