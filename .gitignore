@@ -32,6 +32,16 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
+
+# uploads
+/public/uploads/**
+!/public/uploads/.gitkeep
+
+# playwright
+/playwright-report/
+/test-results/
+/blob-report/
 
 # vercel
 .vercel
@@ -39,3 +49,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# uploads klasörü içeriğini ignore et
+public/uploads/*
+!public/uploads/.gitkeep

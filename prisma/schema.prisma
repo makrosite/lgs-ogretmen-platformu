@@ -1,0 +1,163 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Teacher {
+  id           String      @id @default(cuid())
+  email        String      @unique
+  passwordHash String
+  name         String
+  title        String?
+  classes      Class[]
+  notes        ZumreNote[]
+  createdAt    DateTime    @default(now())
+}
+
+model Class {
+  id        String    @id @default(cuid())
+  name      String
+  teacherId String
+  teacher   Teacher   @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  students  Student[]
+  exams     Exam[]
+}
+
+model Student {
+  id           String            @id @default(cuid())
+  name         String
+  number       Int
+  classId      String
+  class        Class             @relation(fields: [classId], references: [id], onDelete: Cascade)
+  targetSchool String?
+  parentPhone  String?
+  examResults  ExamResult[]
+  links        StudentLink[]
+  resources    ResourceTracker[]
+}
+
+model Exam {
+  id        String        @id @default(cuid())
+  name      String
+  publisher String
+  date      DateTime
+  classId   String
+  class     Class         @relation(fields: [classId], references: [id], onDelete: Cascade)
+  links     StudentLink[]
+  results   ExamResult[]
+  locked    Boolean       @default(false)
+}
+
+model StudentLink {
+  id        String    @id @default(cuid())
+  token     String    @unique
+  examId    String
+  studentId String
+  exam      Exam      @relation(fields: [examId], references: [id], onDelete: Cascade)
+  student   Student   @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  usedAt    DateTime?
+  expiresAt DateTime
+}
+
+model ExamResult {
+  id             String          @id @default(cuid())
+  examId         String
+  studentId      String
+  exam           Exam            @relation(fields: [examId], references: [id], onDelete: Cascade)
+  student        Student         @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  subjectResults SubjectResult[]
+  wrongQuestions WrongQuestion[]
+  submittedAt    DateTime        @default(now())
+  parentNotified Boolean         @default(false)
+  teacherNote    String?
+  projectedScore Float?
+  projectedNet   Float?
+  percentile     Float?
+}
+
+model SubjectResult {
+  id           String     @id @default(cuid())
+  examResultId String
+  examResult   ExamResult @relation(fields: [examResultId], references: [id], onDelete: Cascade)
+  subject      String
+  correct      Int
+  wrong        Int
+  blank        Int
+}
+
+model WrongQuestion {
+  id            String     @id @default(cuid())
+  examResultId  String
+  examResult    ExamResult @relation(fields: [examResultId], references: [id], onDelete: Cascade)
+  subject       String
+  questionNo    Int
+  photoUrl      String?
+  teacherDiag   String?
+  kazanim       String?
+  solvedInClass Boolean    @default(false)
+}
+
+model School {
+  id       String           @id @default(cuid())
+  name     String
+  type     String
+  city     String
+  district String
+  yearData SchoolYearData[]
+}
+
+model SchoolYearData {
+  id         String @id @default(cuid())
+  schoolId   String
+  school     School @relation(fields: [schoolId], references: [id], onDelete: Cascade)
+  year       Int
+  minScore   Float
+  maxScore   Float
+  quota      Int
+  percentile Float
+}
+
+model ResourceTracker {
+  id          String       @id @default(cuid())
+  studentId   String
+  student     Student      @relation(fields: [studentId], references: [id], onDelete: Cascade)
+  publisher   String
+  bookName    String
+  subject     String       @default("Matematik")
+  totalTests  Int
+  assignments Assignment[]
+}
+
+model Assignment {
+  id                String          @id @default(cuid())
+  resourceTrackerId String
+  resource          ResourceTracker @relation(fields: [resourceTrackerId], references: [id], onDelete: Cascade)
+  startTest         Int
+  endTest           Int
+  dueDate           DateTime
+  status            String          @default("pending")
+  score             String?
+}
+
+model ZumreNote {
+  id        String   @id @default(cuid())
+  teacherId String
+  teacher   Teacher  @relation(fields: [teacherId], references: [id], onDelete: Cascade)
+  content   String
+  createdAt DateTime @default(now())
+}
+
+model KazanimProgress {
+  id         String @id @default(cuid())
+  classId    String
+  subject    String
+  code       String
+  title      String
+  masteryPct Float
+  status     String @default("planned")
+  weekLabel  String @default("")
+}

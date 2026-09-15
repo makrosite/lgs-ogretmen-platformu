@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# LGS Öğretmen Platformu
 
-## Getting Started
+LGS deneme takip sistemi — öğrenci form linkleri, yanlış soru galerisi, veli WhatsApp raporları.
 
-First, run the development server:
+**Stack:** Next.js 15 · TypeScript · Tailwind CSS · PostgreSQL · Prisma · Docker
+
+---
+
+## Yeni PC'de Kurulum (Docker Desktop gerekli)
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/makrosite/lgs-ogretmen-platformu.git
+cd lgs-ogretmen-platformu
+bash setup.sh
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Script otomatik olarak:
+- `.env` dosyasını oluşturur ve güvenli secret'lar üretir
+- Docker image'ı build eder
+- Konteynerleri başlatır
+- Veritabanını hazırlar ve demo verileri yükler
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Kurulum bittikten sonra → **http://localhost**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Alan | Değer |
+|------|-------|
+| E-posta | `selim@lgs.local` |
+| Şifre | `ogretmen123` |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Gereksinimler
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Docker Desktop](https://www.docker.com/products/docker-desktop) (Windows/Mac/Linux)
+- Git
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Node.js veya npm **gerekmez** — her şey Docker içinde çalışır.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Konteyner Yönetimi
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+# Durdur
+docker compose down
+
+# Tekrar başlat
+docker compose up -d
+
+# Canlı log
+docker compose logs -f
+
+# Veritabanı dahil tamamen sil
+docker compose down -v
+```
+
+---
+
+## Ekranlar
+
+| Route | Açıklama |
+|-------|----------|
+| `/login` | Öğretmen girişi |
+| `/dashboard` | Ana gösterge paneli |
+| `/denemeler` | Sınav listesi + öğrenci link üretici |
+| `/yanlis-sorular/[examId]` | Fotoğraf galerisi + öğrenci tablosu |
+| `/mufredat` | Müfredat ve kazanım takibi |
+| `/tercih` | Hedef lise ve taban puan motoru |
+| `/ogrenciler/[studentId]` | Öğrenci karnesi + veli raporu |
+| `/kaynak-takip/[studentId]` | Kaynak ve ödev çizelgesi |
+| `/form/[token]` | Öğrenci PWA formu (D/Y/B + fotoğraf) |
+| `/rapor/[token]` | Veli mobil raporu |
+
+---
+
+## Geliştirme (local)
+
+```bash
+docker compose up -d postgresql
+cp .env.example .env
+# .env içinde DATABASE_URL'i localhost'a çevir
+npm install
+npx prisma db push
+npm run db:seed
+npm run dev
+```
