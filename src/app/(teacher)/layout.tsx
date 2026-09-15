@@ -31,13 +31,13 @@ export default async function TeacherLayout({
         className={klass?.name ?? "8-A"}
         studentCount={klass?._count.students ?? 0}
       />
-      <div className="flex min-h-screen flex-col pl-60">
+      <div className="flex min-h-screen flex-col pl-52">
         <Header
           teacherName={session.user.name ?? "Öğretmen"}
           teacherTitle={session.user.title ?? ""}
           notifCount={pending}
         />
-        <main className="mx-auto w-full max-w-[1280px] flex-1 bg-background px-space-md pt-14 py-space-md">
+        <main className="mx-auto w-full max-w-[1280px] flex-1 bg-background px-4 pt-12 pb-6">
           {children}
         </main>
       </div>
