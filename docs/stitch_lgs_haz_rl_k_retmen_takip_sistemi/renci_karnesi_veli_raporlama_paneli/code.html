@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#7c839b","outline":"#76777d","outline-variant":"#c6c6cd","on-surface":"#0b1c30","surface-bright":"#f8f9ff","secondary-fixed-dim":"#c3c0ff","on-tertiary-container":"#009668","on-primary-fixed-variant":"#3f465c","secondary":"#4b41e1","background":"#f8f9ff","on-tertiary-fixed":"#002113","surface":"#f8f9ff","tertiary-fixed":"#6ffbbe","surface-variant":"#d3e4fe","on-secondary-fixed-variant":"#3323cc","on-surface-variant":"#45464d","surface-dim":"#cbdbf5","surface-container-high":"#dce9ff","on-tertiary":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#4edea3","on-background":"#0b1c30","on-error-container":"#93000a","surface-container-lowest":"#ffffff","inverse-on-surface":"#eaf1ff","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","error-container":"#ffdad6","primary-fixed-dim":"#bec6e0","on-secondary-fixed":"#0f0069","on-error":"#ffffff","secondary-container":"#645efb","on-secondary-container":"#fffbff","on-primary":"#ffffff","surface-container-low":"#eff4ff","on-secondary":"#ffffff","surface-tint":"#565e74","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#005236","primary-container":"#131b2e","inverse-primary":"#bec6e0","secondary-fixed":"#e2dfff","tertiary":"#000000","tertiary-container":"#002113","primary":"#000000","on-primary-fixed":"#131b2e","primary-fixed":"#dae2fd"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2.25rem","space-md":"1rem","gutter":"1.5rem","margin-compact":"1.25rem","gutter-compact":"1rem","space-lg":"1.5rem","margin":"2rem"},"fontFamily":{"headline-sm":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"metric-stat":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-md":["Inter"]},"fontSize":{"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"metric-stat":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-lg"><div class="flex items-center gap-space-sm pb-space-lg"><img alt="LGS Öğretmen Portalı Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz-GIyq55uV-0o8pak3f5_mmQVi9_OKFSVAqSgHpwlH4lRPrwA0nf4YwbeMDUJIS5o70x3d-4s-SA9ALPadS9_TwRaPlT44ehCAV1qq6uDbE_czBNPCkOgj2gaUcm524H3M5C8J4USFOgD3LZ-JxOniDG9SgmnDSI7RO3tAwOWfhH9vyLJfrTI5ViGnXkG-BEgfC3xNPJ3bFrMBuRVoTqPLwg5vtsKWmya8jABRSOgODj4klca0Clusw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">LGS Portal</span><span class="font-label-sm text-label-sm text-on-surface-variant">Öğretmen Akademisi</span></div></div><div class="mb-space-lg"><label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs">Aktif Şube / Sınıf</label><div class="relative bg-surface-container-lowest rounded-xl p-space-sm flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] cursor-pointer group"><div class="flex items-center gap-space-xs overflow-hidden"><span class="material-symbols-outlined text-secondary text-[20px]">groups</span><div class="truncate"><p class="font-label-lg text-label-lg text-on-surface truncate">8-A Fen &amp; Mat</p><p class="font-body-sm text-body-sm text-on-surface-variant">28 Kayıtlı Öğrenci</p></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg rounded-xl"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Genel Bakış &amp; Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="denemeler" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-label-lg text-label-lg">Deneme Sınavları &amp; Link</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="soru-havuzu" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span class="font-label-lg text-label-lg">Yanlış Soru Galerisi</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tercih-motoru" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-lg text-label-lg">Tercih &amp; Taban Puanlar</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-lg rounded-xl" data-path="ogrenciler" href="#"><span class="material-symbols-outlined text-[20px]">person_search</span><span class="font-label-lg text-label-lg">Öğrenci &amp; Veli Raporu</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ayarlar" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Ayarlar &amp; Kurum Bilgisi</span></a></nav></div><div class="p-space-lg space-y-space-md"><div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span><span class="font-label-md text-label-md text-on-surface font-semibold">%100 Ücretsiz Erişim</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">MEB 2025 müfredatı ve kazanımları günceldir.</p></div><a class="flex items-center justify-between py-space-xs px-space-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">calendar_month</span><span class="font-label-md text-label-md">MEB Çalışma Takvimi</span></div><span class="material-symbols-outlined text-[16px]">chevron_right</span></a></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-bright/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center w-96"><div class="relative w-full flex items-center bg-surface-container-lowest rounded-xl px-space-md py-space-xs shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-outline text-[20px] mr-space-xs">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Öğrenci, deneme veya soru kazanımı ara..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="bg-secondary text-on-secondary px-space-md py-space-xs rounded-xl font-label-md text-label-md flex items-center gap-space-xs shadow-[0_1px_8px_rgba(0,0,0,0.08)] hover:bg-secondary-container hover:text-on-secondary-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Yeni Deneme Linki Oluştur</span></button><div class="relative cursor-pointer p-space-xs rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[9px]">14</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer pl-space-xs"><div class="text-right hidden sm:block"><p class="font-label-md text-label-md text-on-surface leading-tight">Selim Hoca</p><p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Matematik Zümre Bşk.</p></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJofeupyqK0BtHwxv2VoxoRphediDYwW5rHv6YskCkwwh5EnybQ2LpfEv4xJbajlfev7sSs7uvM9eALXZ_-lPqA7L5O1z5oX72UdrFRCVHdz455EE77sPB9Cv7Axt63AlHzv3qg4IiXVkrDfIkU8qqga0huBp9CTrNK3oiDJGdWmjkeaM0sSnAKQzXyTE6sWdccYJ4Zjf0ecM65p_Xzu1QHTQWCBW7ZaqtOe0IbHyBKj-18Wf6mjDoyw"/></div></div></header><main class="w-full pt-16 px-space-lg py-space-lg bg-background flex-1"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Top Action & Meta Bar (Teacher Command Bar) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="relative">
+<img class="w-14 h-14 rounded-full object-cover shadow-sm" data-alt="Warm portrait of a diligent 14-year-old Turkish female student with braided dark hair and glasses in a modern bright school library wearing a navy uniform, soft natural window lighting, confident gentle smile, educational studio portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmbxQcIA3UfqaUnIELwfr0a79CpiChnO0ubaC5DivkPsPQtpRUKBSoGuERSZeyUUm-optLhB9UTWjdqfA5Z0DL2tGp97oEbSRZJ4a0qh92tMq9MXbmhAYGL6g9TfL8kBdJkfHcsDE-sNBQhTkJlIH4QggtqQGIRS4FbgCe9XaxP8d-UOsrribAEF669mzK0Eo0LlO20GRG80yp52eO6EYY96Ma5M_fqzsV9D6_8DMmzNQfFual9IGhdQ"/>
+<span class="absolute -bottom-1 -right-1 bg-on-tertiary-container text-on-tertiary w-5 h-5 rounded-full flex items-center justify-center font-label-sm text-[10px] shadow-sm">
+<span class="material-symbols-outlined text-[13px]">verified</span>
+</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface">Zeynep Kaya</h2>
+<span class="bg-surface-container-high text-on-surface-variant px-space-sm py-0.5 rounded-full font-label-sm text-label-sm">8-A Şubesi</span>
+<span class="bg-surface-container-low text-on-surface-variant px-space-sm py-0.5 rounded-full font-label-sm text-label-sm">No: 412</span>
+<span class="bg-secondary-fixed text-on-secondary-fixed-variant px-space-sm py-0.5 rounded-full font-label-sm text-label-sm font-semibold">Hedef: Kabataş Erkek</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-1.5 mt-0.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">insights</span>
+<span>Rapor Dönemi: <strong>Son 4 Deneme Gelişim &amp; MEB 2025 LGS Projeksiyonu</strong></span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-tertiary-container font-medium flex items-center gap-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container inline-block"></span>
+            Veli Onayına Hazır
+          </span>
+</p>
+</div>
+</div>
+<!-- Quick Action Controls -->
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="bg-surface-container-low hover:bg-surface-container text-on-surface px-space-md py-space-xs rounded-xl font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-sm" id="editNoteBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">edit_note</span>
+<span>Öğretmen Notunu Düzenle</span>
+</button>
+<button class="bg-surface-container-high hover:bg-surface-variant text-on-surface px-space-md py-space-xs rounded-xl font-label-md text-label-md flex items-center gap-1.5 transition-colors shadow-sm" id="downloadPdfBtn" type="button">
+<span class="material-symbols-outlined text-[18px] text-secondary">picture_as_pdf</span>
+<span>Resmi PDF İndir</span>
+</button>
+<button class="bg-on-tertiary-container hover:bg-on-tertiary-fixed-variant text-on-tertiary px-space-lg py-space-xs rounded-xl font-label-md text-label-md flex items-center gap-2 shadow-sm transition-all transform hover:-translate-y-0.5" id="openWhatsAppModalBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">share</span>
+<span>Veliye WhatsApp Linki Gönder</span>
+</button>
+</div>
+</div>
+<!-- Central Live Preview Banner: "Veli Görünümü" Marker -->
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-secondary">
+<span class="material-symbols-outlined text-[15px]">visibility</span>
+</span>
+<span class="font-label-lg text-label-lg text-on-surface font-semibold">Veli Önizleme Modu</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">(Sayın Velimiz, bu linke tıkladığında mobil veya masaüstünde aşağıdaki şık ve teşvik edici paneli görecektir)</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">mark_email_read</span>
+<span>Son İzleme: <strong>Dün 20:45 (Veli Açtı)</strong></span>
+</div>
+</div>
+<!-- The Actual Student Report Canvas (Parent-Facing Friendly & Empowering View) -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Report Top Header Ribbon -->
+<div class="bg-primary-container p-space-lg text-on-primary relative overflow-hidden">
+<!-- Ambient Decorative Accent -->
+<div class="absolute -right-16 -top-16 w-64 h-64 rounded-full bg-secondary-container/20 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-2">
+<span class="bg-secondary-container/50 text-on-secondary-container font-label-sm text-[11px] uppercase tracking-wider px-2 py-0.5 rounded">Özel Başarı Karnesi</span>
+<span class="font-label-sm text-outline-variant text-[11px]">Belge No: LGS-2025-0412-A</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-surface-bright tracking-tight">8-A LGS Hazırlık Süreci • Öğrenci Gelişim Karnesi</h1>
+<p class="font-body-md text-body-md text-surface-container-high">Özel Fen &amp; Matematik Akademisi — Bireysel İzleme ve Rehberlik Servisi</p>
+</div>
+<div class="flex items-center gap-space-md bg-surface-container-lowest/10 backdrop-blur-md px-space-md py-space-sm rounded-xl">
+<div class="text-right">
+<p class="font-label-sm text-label-sm text-surface-container-highest">Genel Dönem Başarı Puanı</p>
+<p class="font-headline-md text-headline-md text-tertiary-fixed font-bold">472.45 <span class="text-body-sm font-normal text-surface-container-high">/ 500</span></p>
+</div>
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/20 flex items-center justify-center text-tertiary-fixed">
+<span class="material-symbols-outlined text-[24px]">workspace_premium</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Teacher Narrative Endorsement (Human, Warm, Highly Encouraging) -->
+<div class="p-space-lg bg-surface-container-low/50">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col md:flex-row items-start gap-space-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<img alt="Selim Hoca Profile" class="w-12 h-12 rounded-full object-cover shadow-sm shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJofeupyqK0BtHwxv2VoxoRphediDYwW5rHv6YskCkwwh5EnybQ2LpfEv4xJbajlfev7sSs7uvM9eALXZ_-lPqA7L5O1z5oX72UdrFRCVHdz455EE77sPB9Cv7Axt63AlHzv3qg4IiXVkrDfIkU8qqga0huBp9CTrNK3oiDJGdWmjkeaM0sSnAKQzXyTE6sWdccYJ4Zjf0ecM65p_Xzu1QHTQWCBW7ZaqtOe0IbHyBKj-18Wf6mjDoyw"/>
+<div class="flex-1 space-y-1">
+<div class="flex flex-wrap items-center justify-between gap-2">
+<div>
+<span class="font-label-lg text-label-lg text-on-surface font-bold">Selim Hoca</span>
+<span class="text-on-surface-variant font-label-md text-label-md ml-1.5">Matematik Zümre Bşk. &amp; 8-A Mentörü</span>
+</div>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-on-tertiary-container bg-surface-container-highest px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[14px]">sentiment_satisfied</span>
+              Öğretmen Değerlendirmesi Onaylandı
+            </span>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface pt-1 leading-relaxed" id="teacherNoteContent">
+            "Zeynep özellikle geometri ve fen deney sorularında son 3 haftada çok belirgin bir disiplin gösterdi. Netleri <span class="font-semibold text-secondary">65'ten 77.5'e yükseldi</span>. Sadece sözel mantık sorularında soru kökünü dikkatli okuyarak biraz hız kazanması gerekiyor. Zeynep'in çalışma azmi ve motivasyonu çok yüksek; evdeki destekleyici tutumunuz için teşekkür ederim."
+          </p>
+</div>
+</div>
+</div>
+<!-- Core Metrics Cards Grid (High Motivation, Clear Growth) -->
+<div class="p-space-lg space-y-space-lg">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Metric Card 1: Accuracy Rate -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wide">Genel Doğruluk Oranı</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[20px]">task_alt</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-2">
+<span class="font-metric-stat text-metric-stat text-on-surface">%86.2</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container flex items-center font-bold">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +%9.0 Artış
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Son 4 sınavda soru kaçırma oranı düzenli olarak düşüyor.</p>
+</div>
+<!-- Metric Card 2: Net Score & Class Standing -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wide">Son Deneme Neti</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-on-tertiary-container">
+<span class="material-symbols-outlined text-[20px]">military_tech</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-2">
+<span class="font-metric-stat text-metric-stat text-on-surface">77.5 <span class="text-headline-sm font-normal text-on-surface-variant">/ 90</span></span>
+<span class="bg-surface-container-highest text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">
+              Sınıf 3.sü
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Özdebir Türkiye Geneli LGS Provası (Toplam 28 Kişilik 8-A).</p>
+</div>
+<!-- Metric Card 3: Percentile Projection -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wide">LGS Tahmini Yüzdelik Dilim</span>
+<span class="p-1.5 rounded-lg bg-surface-container-high text-secondary-container">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline gap-2">
+<span class="font-metric-stat text-metric-stat text-secondary">%2.10</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container flex items-center font-bold">
+              Hedefe Yakın
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hedeflenen Galatasaray &amp; Kabataş Erkek bandına adım adım yaklaşıyor.</p>
+</div>
+</div>
+<!-- Growth Trajectory Curve & Motivation Indicator -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm mb-space-md">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Denemeler Boyunca Net Gelişimi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Zeynep'in son 4 resmî LGS prova sınavındaki net artış trendi</p>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface">
+<span class="w-3 h-3 rounded-full bg-secondary inline-block"></span>
+<span>Zeynep'in Netleri</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-outline">
+<span class="w-3 h-0.5 bg-outline inline-block"></span>
+<span>8-A Sınıf Ortalaması (68.4)</span>
+</div>
+</div>
+</div>
+<!-- Inline Visual Chart (SVG Sparkline Graph with Exact Data Points) -->
+<div class="w-full bg-surface-container-low rounded-xl p-space-md">
+<div class="relative h-48 w-full flex items-end">
+<!-- Benchmark Dashed Line -->
+<div class="absolute inset-x-0 bottom-16 border-b border-dashed border-outline-variant flex items-center justify-end pr-2 pointer-events-none">
+<span class="font-label-sm text-[10px] text-outline">Sınıf Ortalaması: 68.4</span>
+</div>
+<!-- SVG Curves -->
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 700 160">
+<!-- Soft Area Fill -->
+<defs>
+<lineargradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#4b41e1" stop-opacity="0.18"></stop>
+<stop offset="100%" stop-color="#4b41e1" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<polygon fill="url(#chartGradient)" points="50,130 250,95 450,55 650,22 650,160 50,160"></polygon>
+<!-- Trajectory Line -->
+<polyline fill="none" points="50,130 250,95 450,55 650,22" stroke="#4b41e1" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"></polyline>
+<!-- Points with Data Labels -->
+<!-- Sınav 1 -->
+<circle cx="50" cy="130" fill="#4b41e1" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Sınav 2 -->
+<circle cx="250" cy="95" fill="#4b41e1" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Sınav 3 -->
+<circle cx="450" cy="55" fill="#4b41e1" r="6" stroke="#ffffff" stroke-width="2"></circle>
+<!-- Sınav 4 -->
+<circle cx="650" cy="22" fill="#009668" r="7" stroke="#ffffff" stroke-width="3"></circle>
+</svg>
+</div>
+<!-- Chart X-Axis Labels -->
+<div class="grid grid-cols-4 pt-space-xs text-center font-label-md text-label-md text-on-surface-variant">
+<div class="flex flex-col items-center">
+<span class="font-bold text-on-surface">1. Deneme (Özdebir-1)</span>
+<span class="text-outline font-label-sm">65.00 Net</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-bold text-on-surface">2. Deneme (TÖDER-1)</span>
+<span class="text-outline font-label-sm">69.25 Net</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-bold text-on-surface">3. Deneme (Hız-2)</span>
+<span class="text-outline font-label-sm">73.75 Net</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-bold text-on-tertiary-container">4. Deneme (Son Sınav)</span>
+<span class="text-on-tertiary-container font-label-sm font-bold">77.50 Net (+12.5 Toplam Artış)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Subject Mastery Breakdown (Ders Bazlı İlerleme Çubukları & Kazanım Sayacı) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Left 8 Cols: Branch Progress Bars -->
+<div class="lg:col-span-8 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Ders Bazında Netler ve Kazanım Hakimiyeti</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">MEB 2025 müfredatına göre işlenen 48 alt konunun takibi</p>
+</div>
+<div class="bg-surface-container-high px-space-sm py-1 rounded-xl font-label-md text-label-md text-secondary font-bold">
+              Tamamlanan: 42 / 48 Kazanım (%87.5)
+            </div>
+</div>
+<div class="space-y-space-sm">
+<!-- Türkçe -->
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between mb-1.5 font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">menu_book</span>
+                  Türkçe (20 Soru)
+                </span>
+<span class="text-on-surface font-bold">18.00 Net <span class="text-on-tertiary-container font-medium text-label-sm">(18 D / 2 Y)</span></span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 overflow-hidden">
+<div class="bg-secondary h-2.5 rounded-full" style="width: 90%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] font-body-sm text-on-surface-variant">
+<span>Kazanım: Paragrafta Anlam &amp; Fiilimsiler tam kavrandı.</span>
+<span class="text-on-tertiary-container font-semibold">Hedefin Üstünde</span>
+</div>
+</div>
+<!-- Matematik -->
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between mb-1.5 font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">functions</span>
+                  Matematik (20 Soru)
+                </span>
+<span class="text-on-surface font-bold">15.50 Net <span class="text-on-tertiary-container font-medium text-label-sm">(16 D / 2 Y / 2 B)</span></span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 overflow-hidden">
+<div class="bg-secondary h-2.5 rounded-full" style="width: 78%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] font-body-sm text-on-surface-variant">
+<span class="text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">flag</span> Gelişime Açık: Çarpanlar ve Katlar (Haftaya 1 saat birebir etüt planlandı)
+                </span>
+<span class="text-secondary font-semibold">İvme Pozitif</span>
+</div>
+</div>
+<!-- Fen Bilimleri -->
+<div class="bg-surface-container-low p-space-sm rounded-xl">
+<div class="flex items-center justify-between mb-1.5 font-label-md text-label-md">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">biotech</span>
+                  Fen Bilimleri (20 Soru)
+                </span>
+<span class="text-on-surface font-bold">18.66 Net <span class="text-on-tertiary-container font-medium text-label-sm">(19 D / 1 Y)</span></span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-2.5 overflow-hidden">
+<div class="bg-on-tertiary-container h-2.5 rounded-full" style="width: 94%;"></div>
+</div>
+<div class="flex justify-between items-center mt-1 text-[11px] font-body-sm text-on-surface-variant">
+<span>DNA ve Genetik Kod, Mevsimler ünitelerinde sıfır hata.</span>
+<span class="text-on-tertiary-container font-semibold">Mükemmel Düzey</span>
+</div>
+</div>
+<!-- Sözel Yan Branşlar (İnkılap, Din, İngilizce) 3'lü Mini Izgara -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs pt-1">
+<div class="bg-surface-container-low p-space-xs rounded-xl text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">T.C. İnkılap Tarihi</p>
+<p class="font-headline-sm text-headline-sm text-on-surface font-bold">9.33 <span class="text-label-sm font-normal text-on-surface-variant">/ 10</span></p>
+<span class="text-[10px] text-on-tertiary-container font-semibold">Kazanım %95</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded-xl text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Din Kültürü &amp; Ah. B.</p>
+<p class="font-headline-sm text-headline-sm text-on-surface font-bold">8.00 <span class="text-label-sm font-normal text-on-surface-variant">/ 10</span></p>
+<span class="text-[10px] text-secondary font-semibold">Kazanım %80</span>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded-xl text-center">
+<p class="font-label-sm text-label-sm text-on-surface-variant">Yabancı Dil (İngilizce)</p>
+<p class="font-headline-sm text-headline-sm text-on-surface font-bold">8.00 <span class="text-label-sm font-normal text-on-surface-variant">/ 10</span></p>
+<span class="text-[10px] text-secondary font-semibold">Kazanım %80</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right 4 Cols: Motivasyon & Hedef Lise Projeksiyonu -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">explore</span>
+<h4 class="font-headline-sm text-headline-sm text-on-surface">Hedef Lise Durumu</h4>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Zeynep'in tercih listesindeki ilk 3 lisenin geçen yılki taban yüzdelik dilimleriyle güncel performansının kıyası:
+            </p>
+<div class="space-y-space-sm">
+<!-- Okul 1 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="font-bold text-on-surface truncate">Kabataş Erkek Lisesi</span>
+<span class="text-secondary font-bold">%0.45</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 my-1.5">
+<div class="bg-secondary-container h-1.5 rounded-full" style="width: 72%;"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span>Mevcut Dilim: %2.10</span>
+<span class="text-on-surface font-semibold text-secondary">+2.5 Mat Neti Gerekiyor</span>
+</div>
+</div>
+<!-- Okul 2 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="font-bold text-on-surface truncate">İstanbul Atatürk Fen Lisesi</span>
+<span class="text-secondary font-bold">%1.30</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 my-1.5">
+<div class="bg-on-tertiary-container h-1.5 rounded-full" style="width: 88%;"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span>Mevcut Dilim: %2.10</span>
+<span class="text-on-tertiary-container font-semibold">Hedef Menzilinde</span>
+</div>
+</div>
+<!-- Okul 3 -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl">
+<div class="flex items-center justify-between text-label-md font-label-md">
+<span class="font-bold text-on-surface truncate">Kadıköy Anadolu Lisesi</span>
+<span class="text-secondary font-bold">%2.40</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5 my-1.5">
+<div class="bg-on-tertiary-container h-1.5 rounded-full" style="width: 100%;"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] font-label-sm text-on-surface-variant">
+<span>Mevcut Dilim: %2.10</span>
+<span class="text-on-tertiary-container font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">check_circle</span> Güvenli Bölgede
+                  </span>
+</div>
+</div>
+</div>
+</div>
+<!-- Mentör Mesajı / Anne-Babaya İpucu -->
+<div class="mt-space-md p-space-sm rounded-xl bg-surface-container-high/60">
+<div class="flex items-center gap-1.5 text-secondary font-label-md text-label-md font-semibold mb-1">
+<span class="material-symbols-outlined text-[17px]">lightbulb</span>
+<span>Evde Destek Önerisi</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Zeynep'i sadece net sayılarıyla değil, deneme sonrası yaptığı eksik analiz disipliniyle övmeniz motivasyonunu daha da pekiştirecektir.
+            </p>
+</div>
+</div>
+</div>
+<!-- Yanlış Yapılan Soruların Analizi (Veli İçin Sadeleştirilmiş, Korkutmayan Bölüm) -->
+<div class="bg-surface-container-low rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Öğrenme Fırsatları &amp; İncelenen Sorular</h3>
+<span class="bg-surface-container-high text-secondary px-2.5 py-0.5 rounded-full font-label-sm text-label-sm font-semibold">
+                Öğretmen İncelemesi Tamamlandı
+              </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Yanlışlar bir eksiklik değil, LGS'de tam puan için basamak olarak ele alınmıştır. Takıldığı sorular zümremiz tarafından incelenmiştir.
+            </p>
+</div>
+<div class="flex items-center gap-1 text-on-tertiary-container font-label-md text-label-md bg-surface-container-lowest px-3 py-1.5 rounded-xl shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Öğrencinin takıldığı 4 soru sisteme yüklendi ve öğretmen tarafından çözümü birebir yapıldı</span>
+</div>
+</div>
+<!-- 2 Örnek İncelenen Soru Kartı -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Soru 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">Matematik • Soru 14</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Kazanım: M.8.1.1.2</span>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container-highest text-on-tertiary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Çözüldü &amp; Kavrandı
+              </span>
+</div>
+<!-- Soru Görsel Kırpması -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-high h-36 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Cropped clean scan of a middle school geometry and algebra mathematics question paper with diagram of right-angled triangle and square roots, neat black typography on white paper with teacher red pencil tick of review, clean educational test assessment excerpt." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAajARKzmrzgV0zNJWrbOul-rBW1Xdn7P73pmV3hekZBXlHsp6_kJ16mgiMTUkDJyJvsnBM3ZtEIfsLBb8T2bLI6IzkR7dxrDaT_2kHS2E-pmbGw9wVb1g8hF58qpPlD_kwCFFc8FEsTSEDVta4Qx_yVsaVdtNfJCEHcw2CRzBYAklo9uaS-aYDYvPPNT6KY7TjtsufFNQzAxVRORTruDqBp2xmI2I-fUrFKypl5Zd7vied6PVc5XJcMw"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] flex items-end p-2">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md text-on-surface px-2 py-1 rounded font-label-sm text-[11px]">
+                  Konu: Çarpanlar ve Katlar / EBOB Problemi
+                </span>
+</div>
+</div>
+<!-- Öğretmen Çözüm Geri Bildirimi -->
+<div class="p-space-xs rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Öğretmen Değerlendirmesi:</strong> Zeynep sorunun mantığını kurmuş fakat işlemde küçük bir işlem hatası yapmış. Hata beraber düzeltildi, benzer 2 alıştırma başarıyla çözüldü.
+            </div>
+</div>
+<!-- Soru 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="bg-surface-container-high text-secondary font-label-sm text-label-sm px-2 py-0.5 rounded font-bold">Türkçe • Soru 8</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Kazanım: T.8.3.14</span>
+</div>
+<span class="inline-flex items-center gap-1 bg-surface-container-highest text-on-tertiary-container px-2 py-0.5 rounded-full font-label-sm text-label-sm font-bold">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> Konu Tekrarı Yapıldı
+              </span>
+</div>
+<!-- Soru Görsel Kırpması -->
+<div class="relative rounded-xl overflow-hidden bg-surface-container-high h-36 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High quality educational snippet of a Turkish language reading comprehension test paper showing a paragraph text analysis question, multiple choice options A B C D, crisp print on off-white paper with modern pedagogical annotations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCv3cc6UAEY6bUoqeiACwlSAh8ALEYL535vFPYQKeAOAzGt6LTfdb8UOupK_uSYs0uhyf31-B6-mrnpZ_gPL_zJGXHjxbodF1IEVmjebCiATuarmKwRIf35L_fVtdigN1PFKzaLqNJBzQ8FX1kZLz9AdlEhKJKmn0IeleDuyw-WVQzn_kMR8qz73_Vh607e7EXGteLVRbVTlb0ZuFhcrEAqH6ThUeW5YAEhEeynQUoR18yv9R3p9hqXHw"/>
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[1px] flex items-end p-2">
+<span class="bg-surface-container-lowest/90 backdrop-blur-md text-on-surface px-2 py-1 rounded font-label-sm text-[11px]">
+                  Konu: Sözel Mantık &amp; Çıkarım Yapma
+                </span>
+</div>
+</div>
+<!-- Öğretmen Çözüm Geri Bildirimi -->
+<div class="p-space-xs rounded-xl bg-surface-container-low font-body-sm text-body-sm text-on-surface-variant">
+<strong class="text-on-surface">Öğretmen Değerlendirmesi:</strong> Çift olumsuz soru kökü dikkatsiz okunmuş. Sözel mantık tablosu kurma tekniği öğrencimize yeniden hatırlatıldı.
+            </div>
+</div>
+</div>
+</div>
+</div>
+<!-- Report Footer Sign-off -->
+<div class="p-space-lg bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between text-outline text-body-sm font-body-sm gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+<span>Bu rapor LGS Öğretmen Portalı Akıllı Analiz Modülü tarafından onaylanmıştır.</span>
+</div>
+<div class="font-label-md text-label-md text-on-surface-variant">
+        Rapor Tarihi: 26 Ekim 2024 • Sürüm: 2.4.1
+      </div>
+</div>
+</div>
+<!-- WhatsApp Dispatch & Communication Log Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-tertiary-container text-[22px]">chat</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Veli İletişim Geçmişi &amp; WhatsApp Paylaşım Şablonu</h3>
+</div>
+<span class="font-label-sm text-label-sm bg-surface-container-high text-on-surface px-2.5 py-1 rounded-full">
+        Öğrenci Velisi: Mehmet Kaya (Baba) • 0532 *** ** 18
+      </span>
+</div>
+<!-- Message Preview Box -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="space-y-1.5 max-w-3xl">
+<div class="flex items-center gap-2">
+<span class="bg-on-tertiary-container text-on-tertiary font-label-sm text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-wider">Otomatik Hazır Mesaj Metni</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">Son gönderim: 24 Ekim 2024</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface bg-surface-container-lowest p-space-sm rounded-xl shadow-sm leading-relaxed">
+          "Sayın Veli, Zeynep'in son Özdebir LGS deneme analizi ve kazanım gelişim raporunu buradan inceleyebilirsiniz: <span class="text-secondary font-semibold underline cursor-pointer">lgs.ogretmen.app/rapor/zk-8a-9812</span>. Zeynep bu hafta fen ve matematikte netlerini kayda değer şekilde artırdı, detaylı öğretmen değerlendirmemiz linktedir. İyi günler dileriz."
+        </p>
+</div>
+<div class="flex flex-col gap-2 shrink-0 w-full md:w-auto">
+<button class="bg-surface-container-lowest hover:bg-surface-container text-on-surface px-space-md py-space-xs rounded-xl font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm transition-colors" id="quickCopyBtn" type="button">
+<span class="material-symbols-outlined text-[18px]">content_copy</span>
+<span id="quickCopyText">Mesajı Kopyala</span>
+</button>
+<button class="bg-on-tertiary-container hover:bg-on-tertiary-fixed-variant text-on-tertiary px-space-md py-space-xs rounded-xl font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm transition-colors" id="directWhatsAppSend" type="button">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>WhatsApp Web ile İlet</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Interactive Teacher Edit Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-primary-container/60 backdrop-blur-sm hidden flex items-center justify-center p-space-md" id="teacherNoteModal">
+<div class="bg-surface-container-lowest rounded-xl max-w-lg w-full p-space-lg shadow-xl space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">edit_note</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Öğretmen Görüş Notunu Güncelle</h3>
+</div>
+<button class="p-1 rounded-full text-on-surface-variant hover:bg-surface-container transition-colors" id="closeModalBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+        Bu not velinin açtığı ekranda ve WhatsApp kartında doğrudan görünür. Olumlu pekiştireçler ve somut çalışma tavsiyeleri eklemeniz önerilir.
+      </p>
+<div>
+<label class="block font-label-md text-label-md text-on-surface mb-1" for="teacherNoteInput">Kişiselleştirilmiş Öğretmen Notu</label>
+<textarea class="w-full bg-surface-container-low rounded-xl p-space-sm font-body-md text-body-md text-on-surface border-none outline-none focus:ring-2 focus:ring-secondary resize-none" id="teacherNoteInput" rows="5">Zeynep özellikle geometri ve fen deney sorularında son 3 haftada çok belirgin bir disiplin gösterdi. Netleri 65'ten 77.5'e yükseldi. Sadece sözel mantık sorularında soru kökünü dikkatli okuyarak biraz hız kazanması gerekiyor. Zeynep'in çalışma azmi ve motivasyonu çok yüksek; evdeki destekleyici tutumunuz için teşekkür ederim.</textarea>
+</div>
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-sm text-label-sm text-on-tertiary-container flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">lock</span>
+          Yalnızca yetkili mentörler değiştirebilir
+        </span>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-xl font-label-md text-label-md text-on-surface hover:bg-surface-container transition-colors" id="cancelModalBtn" type="button">
+            Vazgeç
+          </button>
+<button class="bg-secondary hover:bg-secondary-container text-on-secondary px-space-md py-space-xs rounded-xl font-label-md text-label-md flex items-center gap-1 shadow-sm transition-colors" id="saveNoteBtn" type="button">
+<span class="material-symbols-outlined text-[17px]">check</span>
+<span>Kaydet &amp; Rapora Yansıt</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Feedback (Zero-jump feedback) -->
+<div class="fixed bottom-6 right-6 z-50 bg-primary text-on-primary px-space-md py-space-sm rounded-xl shadow-lg flex items-center gap-2 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none" id="liveToast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[20px]">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">WhatsApp linki başarıyla kopyalandı!</span>
+</div>
+</div>
+<script>
+  // DOM Elements & Interactive State Management
+  const editNoteBtn = document.getElementById('editNoteBtn');
+  const closeModalBtn = document.getElementById('closeModalBtn');
+  const cancelModalBtn = document.getElementById('cancelModalBtn');
+  const saveNoteBtn = document.getElementById('saveNoteBtn');
+  const teacherNoteModal = document.getElementById('teacherNoteModal');
+  const teacherNoteInput = document.getElementById('teacherNoteInput');
+  const teacherNoteContent = document.getElementById('teacherNoteContent');
+
+  const quickCopyBtn = document.getElementById('quickCopyBtn');
+  const quickCopyText = document.getElementById('quickCopyText');
+  const openWhatsAppModalBtn = document.getElementById('openWhatsAppModalBtn');
+  const directWhatsAppSend = document.getElementById('directWhatsAppSend');
+  const downloadPdfBtn = document.getElementById('downloadPdfBtn');
+  const liveToast = document.getElementById('liveToast');
+  const toastMessage = document.getElementById('toastMessage');
+
+  // Toast Functionality
+  function showToast(msg) {
+    toastMessage.textContent = msg;
+    liveToast.classList.remove('translate-y-24', 'opacity-0');
+    liveToast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      liveToast.classList.add('translate-y-24', 'opacity-0');
+      liveToast.classList.remove('translate-y-0', 'opacity-100');
+    }, 3200);
+  }
+
+  // Teacher Note Modal Open/Close Handlers
+  editNoteBtn.addEventListener('click', () => {
+    teacherNoteModal.classList.remove('hidden');
+    teacherNoteInput.focus();
+  });
+
+  function closeModal() {
+    teacherNoteModal.classList.add('hidden');
+  }
+
+  closeModalBtn.addEventListener('click', closeModal);
+  cancelModalBtn.addEventListener('click', closeModal);
+
+  // Save Modified Teacher Note to View
+  saveNoteBtn.addEventListener('click', () => {
+    const updatedNote = teacherNoteInput.value.trim();
+    if (updatedNote.length > 0) {
+      teacherNoteContent.textContent = `"${updatedNote}"`;
+      closeModal();
+      showToast('Öğretmen değerlendirme notu başarıyla güncellendi!');
+    }
+  });
+
+  // Copy Message Handler
+  const messagePayload = "Sayın Veli, Zeynep'in son Özdebir LGS deneme analizi ve kazanım gelişim raporunu buradan inceleyebilirsiniz: https://lgs.ogretmen.app/rapor/zk-8a-9812";
+
+  quickCopyBtn.addEventListener('click', () => {
+    navigator.clipboard.writeText(messagePayload).then(() => {
+      quickCopyText.textContent = "Kopyalandı!";
+      showToast('Önceden oluşturulmuş WhatsApp veli metni kopyalandı!');
+      setTimeout(() => {
+        quickCopyText.textContent = "Mesajı Kopyala";
+      }, 2500);
+    });
+  });
+
+  // Direct WhatsApp Web Trigger
+  const sendWhatsApp = () => {
+    const encoded = encodeURIComponent(messagePayload);
+    window.open(`https://api.whatsapp.com/send?phone=905320000018&text=${encoded}`, '_blank');
+    showToast('WhatsApp Web yönlendirmesi başlatıldı...');
+  };
+
+  openWhatsAppModalBtn.addEventListener('click', sendWhatsApp);
+  directWhatsAppSend.addEventListener('click', sendWhatsApp);
+
+  // PDF Download Trigger
+  downloadPdfBtn.addEventListener('click', () => {
+    showToast('Resmi LGS Gelişim Karnesi PDF formatında hazırlanıyor...');
+  });
+</script></main></div></body></html>

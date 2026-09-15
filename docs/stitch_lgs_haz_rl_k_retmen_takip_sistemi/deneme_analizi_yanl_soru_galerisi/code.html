@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-primary-container":"#7c839b","outline":"#76777d","outline-variant":"#c6c6cd","on-surface":"#0b1c30","surface-bright":"#f8f9ff","secondary-fixed-dim":"#c3c0ff","on-tertiary-container":"#009668","on-primary-fixed-variant":"#3f465c","secondary":"#4b41e1","background":"#f8f9ff","on-tertiary-fixed":"#002113","surface":"#f8f9ff","tertiary-fixed":"#6ffbbe","surface-variant":"#d3e4fe","on-secondary-fixed-variant":"#3323cc","on-surface-variant":"#45464d","surface-dim":"#cbdbf5","surface-container-high":"#dce9ff","on-tertiary":"#ffffff","error":"#ba1a1a","tertiary-fixed-dim":"#4edea3","on-background":"#0b1c30","on-error-container":"#93000a","surface-container-lowest":"#ffffff","inverse-on-surface":"#eaf1ff","inverse-surface":"#213145","surface-container-highest":"#d3e4fe","error-container":"#ffdad6","primary-fixed-dim":"#bec6e0","on-secondary-fixed":"#0f0069","on-error":"#ffffff","secondary-container":"#645efb","on-secondary-container":"#fffbff","on-primary":"#ffffff","surface-container-low":"#eff4ff","on-secondary":"#ffffff","surface-tint":"#565e74","surface-container":"#e5eeff","on-tertiary-fixed-variant":"#005236","primary-container":"#131b2e","inverse-primary":"#bec6e0","secondary-fixed":"#e2dfff","tertiary":"#000000","tertiary-container":"#002113","primary":"#000000","on-primary-fixed":"#131b2e","primary-fixed":"#dae2fd"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","space-xs":"0.25rem","space-xl":"2.25rem","space-md":"1rem","gutter":"1.5rem","margin-compact":"1.25rem","gutter-compact":"1rem","space-lg":"1.5rem","margin":"2rem"},"fontFamily":{"headline-sm":["Plus Jakarta Sans"],"label-lg":["Inter"],"headline-lg":["Plus Jakarta Sans"],"label-sm":["Inter"],"label-md":["Inter"],"body-sm":["Inter"],"metric-stat":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"body-lg":["Inter"],"body-md":["Inter"]},"fontSize":{"headline-sm":["18px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-lg":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"700"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"600"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0em","fontWeight":"400"}],"metric-stat":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"800"}],"headline-md":["22px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}]}}}}</script></head><body class="bg-background font-body-md text-on-surface min-h-screen"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between overflow-y-auto"><div class="p-space-lg"><div class="flex items-center gap-space-sm pb-space-lg"><img alt="LGS Öğretmen Portalı Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz-GIyq55uV-0o8pak3f5_mmQVi9_OKFSVAqSgHpwlH4lRPrwA0nf4YwbeMDUJIS5o70x3d-4s-SA9ALPadS9_TwRaPlT44ehCAV1qq6uDbE_czBNPCkOgj2gaUcm524H3M5C8J4USFOgD3LZ-JxOniDG9SgmnDSI7RO3tAwOWfhH9vyLJfrTI5ViGnXkG-BEgfC3xNPJ3bFrMBuRVoTqPLwg5vtsKWmya8jABRSOgODj4klca0Clusw"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">LGS Portal</span><span class="font-label-sm text-label-sm text-on-surface-variant">Öğretmen Akademisi</span></div></div><div class="mb-space-lg"><label class="block font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider mb-space-xs">Aktif Şube / Sınıf</label><div class="relative bg-surface-container-lowest rounded-xl p-space-sm flex items-center justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)] cursor-pointer group"><div class="flex items-center gap-space-xs overflow-hidden"><span class="material-symbols-outlined text-secondary text-[20px]">groups</span><div class="truncate"><p class="font-label-lg text-label-lg text-on-surface truncate">8-A Fen &amp; Mat</p><p class="font-body-sm text-body-sm text-on-surface-variant">28 Kayıtlı Öğrenci</p></div></div><span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span></div></div><nav class="space-y-space-xs flex flex-col" data-active-classes="bg-secondary-container text-on-secondary-container font-label-lg rounded-xl"><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[20px]">dashboard</span><span class="font-label-lg text-label-lg">Genel Bakış &amp; Dashboard</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="denemeler" href="#"><span class="material-symbols-outlined text-[20px]">assignment</span><span class="font-label-lg text-label-lg">Deneme Sınavları &amp; Link</span></a><a aria-current="page" class="flex items-center gap-space-md px-space-md py-space-sm transition-colors bg-secondary-container text-on-secondary-container font-label-lg rounded-xl" data-path="soru-havuzu" href="#"><span class="material-symbols-outlined text-[20px]">quiz</span><span class="font-label-lg text-label-lg">Yanlış Soru Galerisi</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tercih-motoru" href="#"><span class="material-symbols-outlined text-[20px]">school</span><span class="font-label-lg text-label-lg">Tercih &amp; Taban Puanlar</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ogrenciler" href="#"><span class="material-symbols-outlined text-[20px]">person_search</span><span class="font-label-lg text-label-lg">Öğrenci &amp; Veli Raporu</span></a><a class="flex items-center gap-space-md px-space-md py-space-sm rounded-xl text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="ayarlar" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Ayarlar &amp; Kurum Bilgisi</span></a></nav></div><div class="p-space-lg space-y-space-md"><div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">verified</span><span class="font-label-md text-label-md text-on-surface font-semibold">%100 Ücretsiz Erişim</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">MEB 2025 müfredatı ve kazanımları günceldir.</p></div><a class="flex items-center justify-between py-space-xs px-space-sm text-on-surface-variant hover:text-on-surface transition-colors" href="#"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px]">calendar_month</span><span class="font-label-md text-label-md">MEB Çalışma Takvimi</span></div><span class="material-symbols-outlined text-[16px]">chevron_right</span></a></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-bright/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center w-96"><div class="relative w-full flex items-center bg-surface-container-lowest rounded-xl px-space-md py-space-xs shadow-[0_1px_8px_rgba(0,0,0,0.02)]"><span class="material-symbols-outlined text-outline text-[20px] mr-space-xs">search</span><input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-outline" placeholder="Öğrenci, deneme veya soru kazanımı ara..." type="text"/></div></div><div class="flex items-center gap-space-md"><button class="bg-secondary text-on-secondary px-space-md py-space-xs rounded-xl font-label-md text-label-md flex items-center gap-space-xs shadow-[0_1px_8px_rgba(0,0,0,0.08)] hover:bg-secondary-container hover:text-on-secondary-container transition-colors" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Yeni Deneme Linki Oluştur</span></button><div class="relative cursor-pointer p-space-xs rounded-full hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-on-surface-variant text-[22px]">notifications</span><span class="absolute top-1 right-1 flex h-4 w-4 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[9px]">14</span></div><div class="h-6 w-px bg-outline-variant"></div><div class="flex items-center gap-space-sm cursor-pointer pl-space-xs"><div class="text-right hidden sm:block"><p class="font-label-md text-label-md text-on-surface leading-tight">Selim Hoca</p><p class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Matematik Zümre Bşk.</p></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJofeupyqK0BtHwxv2VoxoRphediDYwW5rHv6YskCkwwh5EnybQ2LpfEv4xJbajlfev7sSs7uvM9eALXZ_-lPqA7L5O1z5oX72UdrFRCVHdz455EE77sPB9Cv7Axt63AlHzv3qg4IiXVkrDfIkU8qqga0huBp9CTrNK3oiDJGdWmjkeaM0sSnAKQzXyTE6sWdccYJ4Zjf0ecM65p_Xzu1QHTQWCBW7ZaqtOe0IbHyBKj-18Wf6mjDoyw"/></div></div></header><main class="w-full pt-16 px-space-lg py-space-lg bg-background flex-1"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Üst Deneme Başlığı ve Yönetim Aksiyonları -->
+<section class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="space-y-space-xs">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">school</span>
+            8-A Şubesi
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">event</span>
+            Uygulama: 18 Şubat 2025
+          </span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">lock_clock</span>
+            28/28 Katılım Sağlandı
+          </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+          Özdebir Yayınları Türkiye Geneli Deneme-4 Sonuç Raporu
+        </h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[16px]">privacy_tip</span>
+          MEB Telif Güvenliği Modu: Soru metinleri harici OCR işlemine sokulmadan, öğrencilerin yüklediği görsel krokiler ve el yazısı analizleri pedagojik inceleme havuzunda korunur.
+        </p>
+</div>
+<!-- Aksiyon Butonları -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md px-space-md py-space-sm rounded-xl flex items-center gap-space-xs transition-colors shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">lock</span>
+<span>Sonuçları Kilitle</span>
+</button>
+<button class="bg-primary text-on-primary hover:bg-surface-container-highest hover:text-on-surface transition-colors font-label-md text-label-md px-space-md py-space-sm rounded-xl flex items-center gap-space-xs shadow-sm" type="button">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Toplu Yanlış Soru Kitapçığı PDF İndir</span>
+</button>
+</div>
+</div>
+<!-- Ders Sekmeleri -->
+<div class="mt-space-lg flex items-center gap-space-xs overflow-x-auto pb-space-xs">
+<button class="px-space-md py-2 rounded-xl bg-secondary text-on-secondary font-label-md text-label-md whitespace-nowrap shadow-sm">
+        Tümü (49 Fotoğraf)
+      </button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>Matematik</span>
+<span class="bg-error text-on-error text-[10px] font-label-sm px-1.5 py-0.5 rounded-full">18 Fotoğraf</span>
+</button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>Fen Bilimleri</span>
+<span class="bg-error text-on-error text-[10px] font-label-sm px-1.5 py-0.5 rounded-full">14 Fotoğraf</span>
+</button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>Türkçe</span>
+<span class="bg-secondary text-on-secondary text-[10px] font-label-sm px-1.5 py-0.5 rounded-full">9 Fotoğraf</span>
+</button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>İnkılap Tarihi</span>
+<span class="bg-surface-container-highest text-on-surface text-[10px] font-label-sm px-1.5 py-0.5 rounded-full">4</span>
+</button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>Din Kültürü</span>
+<span class="bg-surface-container-highest text-on-surface text-[10px] font-label-sm px-1.5 py-0.5 rounded-full">2</span>
+</button>
+<button class="px-space-md py-2 rounded-xl bg-surface-container-low hover:bg-surface-container-high text-on-surface font-label-md text-label-md whitespace-nowrap transition-colors flex items-center gap-1.5">
+<span>İngilizce</span>
+<span class="bg-surface-container-highest text-on-surface text-[10px] font-label-sm px-1.5 py-0.5 rounded-full">2</span>
+</button>
+</div>
+<!-- Alt Filtreler ve Sıralama Barı -->
+<div class="mt-space-md pt-space-md bg-surface-container-low rounded-xl p-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider pl-space-xs">Görünüm Filtresi:</span>
+<div class="flex items-center gap-1 bg-surface-container-lowest rounded-lg p-1 shadow-sm">
+<button class="px-space-sm py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+            En Çok Yanlış Yapılanlar
+          </button>
+<button class="px-space-sm py-1 rounded hover:bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+            Soru Numarasına Göre
+          </button>
+<button class="px-space-sm py-1 rounded hover:bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+            Öğrenciye Göre Grupla
+          </button>
+</div>
+<label class="inline-flex items-center gap-2 cursor-pointer ml-space-sm">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<span class="font-label-md text-label-md text-on-surface">Sadece Fotoğrafı Olanlar</span>
+</label>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">check_circle</span>
+<span>28 Öğrencinin karalamaları otomatik senkronize edildi</span>
+</div>
+</div>
+</section>
+<!-- En Çok Takılınan Kritik Sorular Özet Kartları (Top 3 Problem Soru) -->
+<section class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[22px]">warning</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Sınıfın Takıldığı En Kritik 3 Soru (Acil Müdahale)</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Toplu derste çözülmek üzere işaretlendi</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<!-- Soru 14 Matematik -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide px-2 py-0.5 rounded bg-error-container text-on-error-container">Matematik • Soru 14</span>
+<span class="font-label-md text-label-md text-error font-bold">%68 Fire</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Üslü Sayılar Alan Hesabı</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Dikdörtgen arsa içine döşenecek fayansların alan oranlamasında üs taban dönüşümü ihmal edilmiş.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-error">groups</span>
+<span>19 Öğrenci Boş/Yanlış</span>
+</div>
+<button class="bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed px-space-sm py-1 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">co_present</span>
+<span>Soruya Odaklan</span>
+</button>
+</div>
+</div>
+<!-- Soru 7 Fen -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide px-2 py-0.5 rounded bg-error-container text-on-error-container">Fen Bilimleri • Soru 7</span>
+<span class="font-label-md text-label-md text-error font-bold">%57 Fire</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Sıvı Basıncı ve U Borusu Deneyi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Yoğunluk ile derinliğin çarpım bağıntısında musluk açıldıktan sonraki yeni denge seviyesi karıştırıldı.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-error">groups</span>
+<span>16 Öğrenci Boş/Yanlış</span>
+</div>
+<button class="bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed px-space-sm py-1 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">co_present</span>
+<span>Soruya Odaklan</span>
+</button>
+</div>
+</div>
+<!-- Soru 19 Matematik -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between relative overflow-hidden group">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-wide px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant">Matematik • Soru 19</span>
+<span class="font-label-md text-label-md text-secondary font-bold">%50 Fire</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mt-1">Eğim ve Doğrusal Denklem Grafiği</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Doğrunun orijinden geçmeyen grafik yorumunda y eksenini kestiği sabit terim pozitif yerine negatif alındı.
+          </p>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">groups</span>
+<span>14 Öğrenci Boş/Yanlış</span>
+</div>
+<button class="bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed px-space-sm py-1 rounded-lg font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">co_present</span>
+<span>Soruya Odaklan</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Öğrenci Yanlış Soru Fotoğraf Galerisi (Grid Görünümü) -->
+<section class="space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface tracking-tight">Öğrenci Yanlış Soru Fotoğraf Galerisi</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Öğrencilerin optik forma ek olarak yüklediği kitapçık fotoğrafları, işlem hatalarını çıplak gözle teşhis etmenizi sağlar.
+        </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Görsel Boyutu:</span>
+<button class="p-1 rounded bg-surface-container-high text-on-surface"><span class="material-symbols-outlined text-[18px]">grid_view</span></button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant"><span class="material-symbols-outlined text-[18px]">view_module</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Kart 1: Matematik Soru 14 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col justify-between group">
+<div>
+<!-- Resim Alanı -->
+<div class="relative w-full h-56 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Clear high resolution top-down mobile phone photo of an open Turkish middle school LGS mathematics practice exam booklet page. The specific math geometry problem shows an area layout with exponent powers 2 to the power of 8, with hand scribbled lead pencil calculations, crossed-out wrong answers, and circled choice B by an 8th grade student." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwnkQQ6dGLJEaGdMXi9l7fmDTgWFcKUBWmhema_S7Y--wJRSdlRlBvBVy5xqy_BrdkOTQKhxIAAmbGHvEIW4fJp_p1USwEpzhRM3CvLviOhTdscuq1VO3q4tSzOd1OHf3-jUm386vav7rwdEyE0Wis00EIzc2jO-d2dA-bBVmjf0CSrWpQl1a9xicarUffIQbanGC9YTb9UxUUQkd1iR_-d8n3gls7trHq48URPQjrW6a_Xc4mJoYJEw"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded font-label-sm text-label-sm text-error font-bold">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+<span>19 Öğrenci Fotoğrafı</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-fixed px-2 py-0.5 rounded font-label-sm text-label-sm">
+              Soru 14
+            </div>
+<div class="absolute bottom-2 left-2 right-2 bg-surface-container-lowest/95 backdrop-blur-sm p-1.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center -space-x-1.5 overflow-hidden">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] ring-2 ring-surface-container-lowest">AY</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-[10px] ring-2 ring-surface-container-lowest">ZT</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-error text-on-error font-label-sm text-[10px] ring-2 ring-surface-container-lowest">BS</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] ring-2 ring-surface-container-lowest">+16</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[130px]">Ahmet, Zeynep ve 16 diğeri</span>
+</div>
+</div>
+<!-- Kart İçeriği -->
+<div class="p-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">M.8.1.2.2 • Üslü İfadeler</span>
+<span class="px-2 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Doğru Şık: C</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Üslü Sayı Alan Parselasyonu</h4>
+<!-- Öğretmen Notu / Teşhisi -->
+<div class="bg-surface-container-low p-space-xs rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">psychology</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Hatalı Formül / Kazanım Eksiği</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Öğrencilerin çoğu tabanları 2 ve 4 yaparken üsleri çarpmak yerine toplamış.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Kart Aksiyon Çubuğu -->
+<div class="p-space-md pt-0 flex items-center justify-between">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Derste Birlikte Çöz</span>
+</label>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors" title="Fotoğrafları İncele (Carousel)">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="p-1.5 rounded-lg bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed transition-colors" title="Benzer Soru Üret">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Kart 2: Fen Bilimleri Soru 7 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A smartphone captured photo of an 8th grade Turkish science exam question booklet. The test question shows detailed black and white physics illustration of liquid pressure in U-tubes with valves, beaker diagrams with water and oil liquids, and handwritten erased pencil annotations around the question text." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhJ9sKryig2-8njbZrVViTNTMFG5QvLqTjwO1yY2M74F9Y2ibl4jpCrwrEq4mEnRg8NP0ywJMGX221HerlhTtt-HNtNIDPnA6tymmuZj7Ok7GB-rN7Z3kesRBw9ioTTXR6S_6tbqOLo68yxBTvE5dj7pwAn7tJAMHtz-gYcAkW8aO62j_Dy7idWOaw6S_1JQ74DMf17QTcosCejLzK9i9T1lXQ2mz92ix91RgrcMVNN7H2RCImYRb5PQ"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded font-label-sm text-label-sm text-error font-bold">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+<span>16 Öğrenci Fotoğrafı</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-fixed px-2 py-0.5 rounded font-label-sm text-label-sm">
+              Soru 7
+            </div>
+<div class="absolute bottom-2 left-2 right-2 bg-surface-container-lowest/95 backdrop-blur-sm p-1.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center -space-x-1.5 overflow-hidden">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] ring-2 ring-surface-container-lowest">CE</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tertiary text-on-tertiary font-label-sm text-[10px] ring-2 ring-surface-container-lowest">AK</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] ring-2 ring-surface-container-lowest">+14</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[130px]">Canan, Arda ve 14 diğeri</span>
+</div>
+</div>
+<div class="p-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">F.8.3.1.2 • Sıvı Basıncı</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">Doğru Şık: D</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Sıvı Basıncı Deney Düzeneği</h4>
+<div class="bg-surface-container-low p-space-xs rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">announcement</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Soru Kökü Dikkatsizliği</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Soru kökündeki 'kesinlikle' ifadesi gözden kaçmış; öğrenciler I ve II'yi işaretlemiş.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center justify-between">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Derste Birlikte Çöz</span>
+</label>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors" title="Fotoğrafları İncele">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="p-1.5 rounded-lg bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed transition-colors" title="Benzer Soru Üret">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Kart 3: Matematik Soru 19 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="A candid photo of a printed Turkish middle school LGS mathematics examination paper showing an x and y coordinate plane cartesian graph problem. Student handwriting with blue ballpoint pen and pencil rough working lines, slopes and intercepts visible with a red marked false choice." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGfiGpwG8q1BEJkPBEXVTbngDYDz65KJJfO6RcPgb_3EC-aOB6aTKWl88-EmDqSDiOn8imDXYYjn_vxxW5mzCSxATvjwulNkP1Nwb6E9het9G7S5TevcFT97IOJRQhurcrUCnuS8b2LkBDyaSV80ewwheOtnhn-Lmj_mJntLb5uM_qKx_VYyizM973vEgojY1S6yoNZAzfLqxFCJhD3vxoqpWLu78pJBtrbWwIdYHYn6ue2qW-uhjzQQ"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded font-label-sm text-label-sm text-error font-bold">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+<span>14 Öğrenci Fotoğrafı</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-fixed px-2 py-0.5 rounded font-label-sm text-label-sm">
+              Soru 19
+            </div>
+<div class="absolute bottom-2 left-2 right-2 bg-surface-container-lowest/95 backdrop-blur-sm p-1.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center -space-x-1.5 overflow-hidden">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-[10px] ring-2 ring-surface-container-lowest">YM</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-tint text-on-primary font-label-sm text-[10px] ring-2 ring-surface-container-lowest">ES</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] ring-2 ring-surface-container-lowest">+12</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[130px]">Yusuf M., Elif S. ve 12 diğeri</span>
+</div>
+</div>
+<div class="p-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">M.8.2.2.4 • Eğim ve Doğru</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">Doğru Şık: A</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Koordinat Sistemi Doğrusal Eğim</h4>
+<div class="bg-surface-container-low p-space-xs rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">lightbulb</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Eksen Karıştırma / Açı Hatası</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Dikey uzunluk / yatay uzunluk oranında x ve y eksenleri ters yerleştirilmiş.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center justify-between">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Derste Birlikte Çöz</span>
+</label>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors" title="Fotoğrafları İncele">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="p-1.5 rounded-lg bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed transition-colors" title="Benzer Soru Üret">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Kart 4: Türkçe Soru 11 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col justify-between group">
+<div>
+<div class="relative w-full h-56 bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Overhead photo of a student's Turkish language LGS mock exam booklet question. A structured verbal logic deduction table with multiple columns and rows, filled with student handwritten checkmarks, question marks, and line strikes during problem solving." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqw4kZEwuf6l2YuVSsW5B3NMTT8Ec9BGqsAjfijIRQoBMTJqkaSY3Tv9QMFSwWj9dpgNz60D01HYnkjWblvzDPZEcdjIERBQQX5osMYGVcgj_ks5E7b93I08LLQZ088itJpPSTmeAjG_T64x3ASk1DF3Yd9tL5FfQ8cRfzG7NhFYh87lM4BYmYOjjmlwKYzUi5ftQy51Ot43SIfTWYMc34AenGhDbLqH27hMc9oUL2S-68qniahOVocA"/>
+<div class="absolute top-2 left-2 flex items-center gap-1 bg-surface-container-lowest/90 backdrop-blur-md px-2 py-0.5 rounded font-label-sm text-label-sm text-on-surface-variant font-bold">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+<span>8 Öğrenci Fotoğrafı</span>
+</div>
+<div class="absolute top-2 right-2 bg-primary-container text-on-primary-fixed px-2 py-0.5 rounded font-label-sm text-label-sm">
+              Soru 11
+            </div>
+<div class="absolute bottom-2 left-2 right-2 bg-surface-container-lowest/95 backdrop-blur-sm p-1.5 rounded-lg flex items-center justify-between">
+<div class="flex items-center -space-x-1.5 overflow-hidden">
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-[10px] ring-2 ring-surface-container-lowest">MD</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-tertiary-container text-on-tertiary font-label-sm text-[10px] ring-2 ring-surface-container-lowest">NA</span>
+<span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-[10px] ring-2 ring-surface-container-lowest">+6</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant truncate max-w-[130px]">Mert, Nazlı ve 6 diğeri</span>
+</div>
+</div>
+<div class="p-space-md space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">T.8.3.26 • Sözel Mantık</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">Doğru Şık: B</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface leading-snug">Turnuva Eşleştirme Tablosu</h4>
+<div class="bg-surface-container-low p-space-xs rounded-lg flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] shrink-0 mt-0.5">schedule</span>
+<div class="min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold block">Zaman Yönetimi ve Olasılık</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">İkinci öncüldeki ihtimali tabloya aktaramayan öğrenciler soruyu yarıda bırakmış.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-space-md pt-0 flex items-center justify-between">
+<label class="inline-flex items-center gap-1.5 cursor-pointer">
+<input class="w-4 h-4 rounded text-secondary focus:ring-secondary accent-secondary" type="checkbox"/>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Derste Birlikte Çöz</span>
+</label>
+<div class="flex items-center gap-1">
+<button class="p-1.5 rounded-lg bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors" title="Fotoğrafları İncele">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+</button>
+<button class="p-1.5 rounded-lg bg-secondary-fixed hover:bg-secondary-fixed-dim text-on-secondary-fixed transition-colors" title="Benzer Soru Üret">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Öğrenci Bazlı Net Listesi Tablosu -->
+<section class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Öğrenci Bazlı Sonuç ve İletişim Konsolu</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+          Optik sonuçlar, fotoğraf yükleme durumu ve veli WhatsApp karnesi tek ekranda.
+        </p>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-md py-space-xs rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Bekleyen Velilere Toplu WhatsApp Gönder</span>
+</button>
+</div>
+</div>
+<!-- Tablo Alanı (Desktop / Tablet) -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md rounded-l-xl">Öğrenci Adı</th>
+<th class="py-3 px-space-sm text-center">Doğru</th>
+<th class="py-3 px-space-sm text-center">Yanlış</th>
+<th class="py-3 px-space-sm text-center">Boş</th>
+<th class="py-3 px-space-sm text-center">Toplam Net</th>
+<th class="py-3 px-space-sm text-center">Tahmini Puan</th>
+<th class="py-3 px-space-sm text-center">Yüklenen Fotoğraf</th>
+<th class="py-3 px-space-sm">Veli Rapor Durumu</th>
+<th class="py-3 px-space-md text-right rounded-r-xl">Aksiyon</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-md text-body-md text-on-surface">
+<!-- Satır 1: Ahmet Yılmaz -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md flex items-center gap-space-xs font-label-lg text-label-lg">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[12px] font-bold">AY</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Ahmet Yılmaz</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No: 412 • 8-A</p>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface">74</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-error">12</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface-variant">4</td>
+<td class="py-3.5 px-space-sm text-center font-bold text-on-surface">70.00 Net</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-md text-label-md font-semibold">442.80</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                6 Soru
+              </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                Gönderildi
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors" title="Detaylı Hata İncelemesi">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-tertiary-container text-on-tertiary hover:opacity-90 transition-opacity font-label-sm text-label-sm flex items-center gap-1" title="Veliye WhatsApp Kartı">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Satır 2: Zeynep Tepe -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md flex items-center gap-space-xs font-label-lg text-label-lg">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-surface-tint text-on-primary text-[12px] font-bold">ZT</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Zeynep Tepe</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No: 508 • 8-A</p>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface">82</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-error">6</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface-variant">2</td>
+<td class="py-3.5 px-space-sm text-center font-bold text-on-surface">80.00 Net</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-md text-label-md font-semibold">478.45</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                4 Soru
+              </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+                Kuyrukta
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-tertiary-container text-on-tertiary hover:opacity-90 transition-opacity font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Satır 3: Berke Soylu -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md flex items-center gap-space-xs font-label-lg text-label-lg">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-error-container text-on-error-container text-[12px] font-bold">BS</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Berke Soylu</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No: 219 • 8-A</p>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface">62</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-error">21</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface-variant">7</td>
+<td class="py-3.5 px-space-sm text-center font-bold text-error">55.00 Net</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-md text-label-md font-semibold">391.10</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                9 Soru
+              </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">error</span>
+                Gönderilmedi
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-secondary text-on-secondary hover:bg-secondary-container transition-colors font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>Şimdi Gönder</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Satır 4: Canan Erdem -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md flex items-center gap-space-xs font-label-lg text-label-lg">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed text-[12px] font-bold">CE</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Canan Erdem</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No: 345 • 8-A</p>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface">78</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-error">9</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface-variant">3</td>
+<td class="py-3.5 px-space-sm text-center font-bold text-on-surface">75.00 Net</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-md text-label-md font-semibold">461.20</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                5 Soru
+              </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                Gönderildi
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-tertiary-container text-on-tertiary hover:opacity-90 transition-opacity font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Satır 5: Arda Kaya -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md flex items-center gap-space-xs font-label-lg text-label-lg">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-surface-container-highest text-on-surface text-[12px] font-bold">AK</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Arda Kaya</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No: 182 • 8-A</p>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface">71</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-error">15</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface-variant">4</td>
+<td class="py-3.5 px-space-sm text-center font-bold text-on-surface">66.00 Net</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-md text-label-md font-semibold">428.35</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                7 Soru
+              </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">done_all</span>
+                Gönderildi
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-tertiary-container text-on-tertiary hover:opacity-90 transition-opacity font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Satır 6: Yusuf Meriç -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="py-3.5 px-space-md flex items-center gap-space-xs font-label-lg text-label-lg">
+<span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-primary-fixed text-on-primary-fixed text-[12px] font-bold">YM</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Yusuf Meriç</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">No: 290 • 8-A</p>
+</div>
+</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface">69</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-error">16</td>
+<td class="py-3.5 px-space-sm text-center font-semibold text-on-surface-variant">5</td>
+<td class="py-3.5 px-space-sm text-center font-bold text-on-surface">63.66 Net</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-md text-label-md font-semibold">419.00</span>
+</td>
+<td class="py-3.5 px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">photo_camera</span>
+                5 Soru
+              </span>
+</td>
+<td class="py-3.5 px-space-sm">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">hourglass_empty</span>
+                Kuyrukta
+              </span>
+</td>
+<td class="py-3.5 px-space-md text-right">
+<div class="flex items-center justify-end gap-1.5">
+<button class="p-2 rounded-xl bg-surface-container-high hover:bg-surface-container text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="px-3 py-1.5 rounded-xl bg-tertiary-container text-on-tertiary hover:opacity-90 transition-opacity font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">chat</span>
+<span>WhatsApp</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Tablo Alt Bilgilendirme ve Hızlı Sayfalama -->
+<div class="pt-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>Her veliye giden linkte sadece öğrencinin kendi net karnesi ve kırpılmış yanlış soru fotoğrafları yer alır.</span>
+</div>
+<div class="flex items-center gap-1">
+<button class="px-3 py-1 rounded bg-surface-container-high text-on-surface font-label-sm text-label-sm">1</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">2</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">3</button>
+</div>
+</div>
+</section>
+</div></main></div></body></html>
